@@ -1,0 +1,26 @@
+{
+  "groups": [
+    {"id":"foundations","title":"建立共同基础","label":"FOUNDATIONS","description":"认识计算机、环境与路径，学会记录，也学会自己找答案。"},
+    {"id":"tools","title":"掌握开发工具","label":"TOOLKIT","description":"用版本管理、终端和网络知识，搭起日常工作的基本流程。"},
+    {"id":"practice","title":"开始编程实践","label":"PRACTICE","description":"管理依赖、处理数据、调试程序，再按方向探索图像与视觉。"},
+    {"id":"collaborate","title":"验证与交接","label":"PASS THE ARC","description":"证明一次修改有效，让另一位同学能够继续你的工作。"}
+  ],
+  "lessons": [
+    {"slug":"computer-basics","title":"计算机基础","group":"foundations","description":"计算机组成、进制、编码、存储单位与位运算。","keywords":"二进制 ASCII Unicode bit KB MB GB","file":"markdown/计算机基础学习教程.md"},
+    {"slug":"environment-paths","title":"开发环境与文件路径","group":"foundations","description":"分清编辑器、解释器和工作目录，让项目在正确位置运行。","keywords":"PATH 路径 venv 安装 环境","file":"markdown/开发环境与文件路径基础学习教程.md"},
+    {"slug":"markdown","title":"Markdown 学习教程","group":"foundations","description":"从标题与代码块，到公式、图片和完整学习笔记。","keywords":"文档 README 表格 数学公式","file":"Markdown学习教程.md"},
+    {"slug":"research-and-questions","title":"检索、阅读文档与提问","group":"foundations","description":"收集证据、读懂官方文档，提出别人能接续的问题。","keywords":"搜索 AI 错误 最小复现","file":"markdown/技术检索、文档阅读与问题提问学习教程.md"},
+    {"slug":"git-github","title":"Git 与 GitHub","group":"tools","description":"提交、分支、冲突与 PR，让修改成为可追溯的协作成果。","keywords":"版本控制 commit push pull request","file":"markdown/Git与GitHub学习教程.md"},
+    {"slug":"linux","title":"Linux 入门","group":"tools","description":"目录、命令、管道与脚本，建立命令行工作的基本能力。","keywords":"Shell Bash 终端 SSH WSL","file":"markdown/Linux学习教程.md"},
+    {"slug":"network-http","title":"计算机网络与 HTTP","group":"tools","description":"从地址与端口，到亲手运行一个本地 HTTP 接口。","keywords":"DNS TCP URL HTTPS API JSON","file":"markdown/计算机网络与HTTP基础学习教程.md"},
+    {"slug":"python-libraries","title":"Python 基础库","group":"practice","description":"路径、数据读写、日志与参数，补上实用编程工具箱。","keywords":"NumPy pandas matplotlib csv json","file":"markdown/Python基础库学习教程.md"},
+    {"slug":"conda","title":"Miniconda 与 Conda","group":"practice","description":"创建独立环境、管理依赖，并把运行条件交给同伴。","keywords":"pip Python environment.yml 依赖 安装","file":"markdown/Miniconda与Conda学习教程.md"},
+    {"slug":"jupyter","title":"Jupyter 与 JupyterLab","group":"practice","description":"用 Notebook 探索数据，理解内核状态与可重复运行。","keywords":"IPython 笔记本 kernel 数据分析","file":"markdown/Python Jupyter与JupyterLab学习教程.md"},
+    {"slug":"pdb-ipdb","title":"Python pdb 与 ipdb","group":"practice","description":"断点、单步和调用栈，从中间值定位程序问题。","keywords":"debug 调试 breakpoint","file":"markdown/Python pdb与ipdb学习教程.md"},
+    {"slug":"gpp-gdb","title":"g++ 与 GDB","group":"practice","description":"理解 C++ 编译链接，再亲手检查程序运行现场。","keywords":"gcc C++ 编译 调试 sanitizer","file":"markdown/g++与GDB学习教程.md"},
+    {"slug":"image-processing","title":"图像处理基础","group":"practice","description":"像素、颜色、滤波与分割，建立视觉处理的基础认识。","keywords":"图像 灰度 RGB HSV 形态学","file":"markdown/图像处理基础学习教程.md"},
+    {"slug":"opencv","title":"Python OpenCV","group":"practice","description":"图像接口、视频与标注，从小型案例走向视觉实践。","keywords":"cv2 摄像头 轮廓 模板匹配","file":"markdown/Python OpenCV学习教程.md"},
+    {"slug":"testing","title":"软件测试与问题复现","group":"collaborate","description":"正常、边界、异常与回归，用证据检查每一次修复。","keywords":"unittest pytest assert 测试","file":"markdown/软件测试与问题复现基础学习教程.md"},
+    {"slug":"collaboration","title":"团队协作与项目交接","group":"collaborate","description":"明确任务、回应审查，让接收者能够独立继续项目。","keywords":"Issue PR review README 交接","file":"markdown/团队协作与项目交接基础学习教程.md"}
+  ]
+}

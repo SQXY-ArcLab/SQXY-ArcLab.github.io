@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= page.description || config.description %>">
+  <meta name="theme-color" content="#f6f5ef">
+  <title><%= page.title ? page.title + ' · ArcLab' : config.title %></title>
+  <link rel="icon" href="<%- url_for('/favicon.svg') %>" type="image/svg+xml">
+  <link rel="canonical" href="<%= config.url.replace(/\/$/, '') + url_for(page.path || '/') %>">
+  <link rel="stylesheet" href="<%- url_for('/css/site.css') %>">
+  <link rel="stylesheet" href="<%- url_for('/vendor/katex/katex.min.css') %>">
+  <script defer src="<%- url_for('/js/site.js') %>"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header wrap">
+    <a class="brand" href="<%- url_for('/') %>" aria-label="ArcLab 首页"><span class="brand-icon" aria-hidden="true">∩</span><span>ARC<span class="brand-light">LAB</span><small>弧光实验室</small></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">菜单 <span aria-hidden="true">＋</span></button>
+    <nav id="primary-nav" aria-label="主导航">
+      <% [['/learn/', '学习中心'], ['/projects/', '项目实践'], ['/about/', '关于我们']].forEach(function(item) { %>
+      <a href="<%- url_for(item[0]) %>" <%- page.path && ('/' + page.path).startsWith(item[0]) ? 'aria-current="page"' : '' %>><%= item[1] %></a>
+      <% }) %>
+      <a class="nav-github" href="<%= theme.organization %>">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main"><%- body %></main>
+  <footer class="site-footer wrap"><div><a class="footer-brand" href="<%- url_for('/') %>">ARC LAB</a><p>Small Team. Long Arc.</p></div><div><p>连接每一个点，形成自己的轨迹。</p><a href="<%- url_for('/contribute/') %>">参与维护</a><span class="footer-dot">·</span><a href="<%= theme.organization %>">GitHub ↗</a></div><div class="footer-meta">© <%= new Date().getFullYear() %> ArcLab<br>记录实践，让经验继续生长。</div></footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+title: ArcLab · 弧光实验室
+subtitle: Connect the Points. Build the Arc.
+description: 从第一份学习笔记，到能交接的真实项目。ArcLab 弧光实验室的成长记录与开放学习资料。
+author: ArcLab
+language: zh-CN
+timezone: Asia/Shanghai
+url: https://sqxy-arclab.github.io
+root: /
+permalink: notes/:title/
+theme: arclab
+source_dir: source
+public_dir: public
+skip_render:
+  - downloads/**
+exclude:
+  - '**/.DS_Store'
+highlight:
+  enable: false
+prismjs:
+  enable: false
+syntax_highlighter: false
+marked:
+  gfm: true
+  breaks: false
+  smartLists: true
+  headerIds: true
+  modifyAnchors: 1
+render_drafts: false
+future: false
+relative_link: false
+updated_option: date
+external_link:
+  enable: true
+  field: site
+  exclude:
+    - github.com
