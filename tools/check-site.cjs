@@ -9,7 +9,7 @@ for(const file of required) {
   const target=path.join(root,file);
   if(!fs.existsSync(target)){failures.push(`Missing page: ${file}`);continue;}
   const html=fs.readFileSync(target,'utf8');
-  if(!html.includes('<html lang="zh-CN">')||!html.includes('<main id="main">'))failures.push(`Incomplete layout: ${file}`);
+  if(!html.includes('<html lang="zh-CN">')||!/<main\b/.test(html))failures.push(`Incomplete layout: ${file}`);
   if(/href="javascript:/i.test(html))failures.push(`Unsafe link: ${file}`);
   const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
   for(const match of html.matchAll(/(?:href|src)="([^"<>]+)"/g)) {

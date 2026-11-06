@@ -6,3 +6,7 @@ db.json
 themes/arclab/source/vendor/
 *.log
 preview/
+
+# Generated from pinned npm theme and tracked overrides
+themes/redefine/
+source/vendor/

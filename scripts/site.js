@@ -1,7 +1,7 @@
 'use strict';
 const katex = require('katex');
 hexo.extend.generator.register('arclab-home', function() {
-  return {path:'index.html', layout:['home'], data:{title:'连接知识的点，走出自己的弧光。'}};
+  return {path:'index.html', layout:['home'], data:{layout:'home',title:'连接知识的点，走出自己的弧光。'}};
 });
 // Render mathematics before Markdown, while keeping fenced examples untouched.
 hexo.extend.filter.register('before_post_render', function(data) {
@@ -44,4 +44,14 @@ hexo.extend.generator.register('arclab-sitemap', function() {
 });
 hexo.extend.generator.register('arclab-robots', function() {
   return {path:'robots.txt', data:`User-agent: *\nAllow: /\nSitemap: ${hexo.config.url.replace(/\/$/,'')}/sitemap.xml\n`};
+});
+
+// Keep the official Redefine shell and route learning pages to local partials.
+hexo.on('ready', function() {
+  const original=hexo.extend.helper.get('getPagePartialPath');
+  hexo.extend.helper.register('getPagePartialPath',function(page){
+    if(page.layout==='home') return 'pages/home/home-content';
+    if(page.layout==='lesson'||page.layout==='learning') return 'arclab/'+page.layout;
+    return original.call(this,page);
+  });
 });

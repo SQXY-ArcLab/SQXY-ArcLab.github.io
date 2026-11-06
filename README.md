@@ -1,6 +1,6 @@
 # ArcLab · 弧光实验室
 
-基于 Hexo 的组织官网与学习中心。首页、学习路径、教程、项目实践和参与维护页面使用同一套自定义主题。
+基于 Hexo 的组织官网与学习中心。采用 Redefine 2.9.0，适配 ArcLab 首页、学习路径与长篇教程，支持深浅色切换。
 
 - 站点地址：https://sqxy-arclab.github.io/
 - 仓库目标：`SQXY-ArcLab/SQXY-ArcLab.github.io`
@@ -32,7 +32,11 @@ source/
   about/                 团队公开介绍
   projects/              实践入口与经确认的公开项目
   contribute/            贡献方法
-themes/arclab/           自定义 EJS 布局、CSS、JavaScript
+theme-overrides/redefine/  ArcLab 的 Redefine 布局覆盖
+_config.redefine.yml     主题配置
+source/css/             ArcLab 深浅色样式
+source/js/              教程检索与代码复制
+themes/arclab/           保留的原主题（回退使用）
 scripts/site.js          首页、站点地图与数学渲染
 tools/                  内容导入、资源准备和构建检查
 .github/workflows/      PR 检查与 Pages 发布
@@ -94,3 +98,13 @@ root: /
 - 网站主题与资料目前没有统一的额外开源许可；转载和再分发需按团队约定及第三方授权处理。
 
 详细的从零搭建、首次发布和排错步骤见 [部署与维护指南](部署与维护指南.md)。
+
+## 主题维护与回退
+
+主题来自 [Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)，版本固定为 2.9.0（GPL-3.0），保留页脚作者署名。主题许可不自动改变教程的内容许可。
+
+调整导航、配色和功能请修改 `_config.redefine.yml`。布局放在 `theme-overrides/redefine/`，不要修改 `node_modules/` 或生成的 `themes/redefine/`。构建时会从已锁定的 npm 包重建主题并应用覆盖。
+
+原有 `themes/arclab/` 完整保留。回退时将 `_config.yml` 的 `theme` 改为 `arclab` 后执行 `npm test`；KaTeX 本地资源仍由构建脚本生成。
+
+右侧工具栏的月亮/太阳图标切换深浅色，浏览器会记住选择。学习中心支持按标题、说明和关键词筛选；教程包含目录与代码复制按钮。

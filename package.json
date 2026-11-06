@@ -2,9 +2,13 @@
   "name": "sqxy-arclab-site",
   "version": "1.0.0",
   "private": true,
-  "hexo": { "version": "8.1.2" },
+  "hexo": {
+    "version": "8.1.2"
+  },
   "description": "ArcLab 弧光实验室官网与学习中心",
-  "engines": { "node": ">=24" },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "build": "node tools/prepare-assets.cjs && hexo clean && hexo generate",
     "server": "hexo server --ip 127.0.0.1",
@@ -16,7 +20,9 @@
     "hexo": "8.1.2",
     "hexo-renderer-ejs": "2.0.0",
     "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-stylus": "3.0.1",
     "hexo-server": "3.0.0",
+    "hexo-theme-redefine": "2.9.0",
     "katex": "^0.16.22"
   }
 }

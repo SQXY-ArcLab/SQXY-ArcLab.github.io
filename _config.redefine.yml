@@ -1,0 +1,73 @@
+# ArcLab overrides; upstream theme stays pinned in package-lock.json.
+info:
+  title: ArcLab · 弧光实验室
+  subtitle: Connect the Points. Build the Arc.
+  author: ArcLab
+  url: https://sqxy-arclab.github.io
+repository: https://github.com/SQXY-ArcLab/SQXY-ArcLab.github.io
+defaults:
+  favicon: /images/arclab-mark.svg
+  logo: /images/arclab-mark.svg
+  avatar: /images/arclab-mark.svg
+colors:
+  primary: '#1688b8'
+global:
+  content_max_width: 1120px
+  single_page: false
+  website_counter:
+    enable: false
+  side_tools:
+    auto_expand: true
+  open_graph:
+    image: /images/arclab-mark.svg
+    description: ArcLab 弧光实验室的开放学习资料与实践记录。
+home_banner:
+  enable: false
+navbar:
+  color:
+    left: '#1688b8'
+    right: '#6678e8'
+    transparency: 10
+  width:
+    home: 1120px
+    pages: 1120px
+  links:
+    Home:
+      path: /
+    学习中心:
+      path: /learn/
+    项目:
+      path: /projects/
+    关于:
+      path: /about/
+    参与贡献:
+      path: /contribute/
+home:
+  sidebar:
+    enable: false
+    show_on_mobile: false
+articles:
+  style:
+    line_height: 1.85
+  word_count:
+    enable: false
+  author_label:
+    enable: false
+  copyright:
+    enable: false
+  lazyload: false
+comment:
+  enable: false
+footer:
+  runtime: false
+  statistics: false
+  start: 2026/11/06 00:00:00
+  icon: '·'
+  customize: '连接知识，动手实践，分享经验。'
+inject:
+  enable: true
+  head:
+    - '<link rel="stylesheet" href="/vendor/katex/katex.min.css">'
+  footer:
+    - '<link rel="stylesheet" href="/css/arclab-redefine.css">'
+    - '<script src="/js/arclab-redefine.js" defer></script>'
