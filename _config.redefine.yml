@@ -6,9 +6,9 @@ info:
   url: https://sqxy-arclab.github.io
 repository: https://github.com/SQXY-ArcLab/SQXY-ArcLab.github.io
 defaults:
-  favicon: /images/arclab-mark.svg
-  logo: /images/arclab-mark.svg
-  avatar: /images/arclab-mark.svg
+  favicon: /images/arclab-emblem.svg
+  logo: /images/arclab-emblem.svg
+  avatar: /images/arclab-emblem.svg
 colors:
   primary: '#1688b8'
 global:
@@ -19,7 +19,7 @@ global:
   side_tools:
     auto_expand: true
   open_graph:
-    image: /images/arclab-mark.svg
+    image: /images/arclab-emblem.svg
     description: ArcLab 弧光实验室的开放学习资料与实践记录。
 home_banner:
   enable: false
